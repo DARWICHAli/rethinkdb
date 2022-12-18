@@ -121,11 +121,11 @@ if __name__ == '__main__':
 
 
 
-		r.db("database10").table("posts").index_drop("content").run()
-		r.db("database100").table("posts").index_drop("content").run()
-		r.db("database1000").table("posts").index_drop("content").run()
-		r.db("database10000").table("posts").index_drop("content").run()
-		r.db("database100000").table("posts").index_drop("content").run()
+		# r.db("database10").table("posts").index_drop("content").run()
+		# r.db("database100").table("posts").index_drop("content").run()
+		# r.db("database1000").table("posts").index_drop("content").run()
+		# r.db("database10000").table("posts").index_drop("content").run()
+		# r.db("database100000").table("posts").index_drop("content").run()
 
 
 		for docnum in documentsNumber:
@@ -178,7 +178,7 @@ if __name__ == '__main__':
 			# else:
 			# 	posts = posts_table.filter(globals()[option]).run()
 
-			post = uniqueCategory.run()
+			posts = uniqueCategory.run()
 			nonuniqueCategory = db.table("posts").get_all("Content", index="content")
 
 
@@ -190,7 +190,7 @@ if __name__ == '__main__':
 			# End time for getting all of the matched documents
 			end = time.time()
 
-			print(f"La durée pour toutes les selections pour une base de donnée de taille {docnum}: {end-now:.2f} secondes\n")
+			print(f"La durée pour toutes les selections pour une base de donnée de taille {docnum}: {end-now:.5f} secondes\n")
 			# q.put('Done')
 			# p.join()
 
