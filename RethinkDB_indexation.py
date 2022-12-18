@@ -102,11 +102,10 @@ if __name__ == '__main__':
 		limit = 0
 
 		# Database size provided before
-		#documentsNumber = [10, 100, 1000, 10000, 100000]
-		documentsNumber = [100000]
+		documentsNumber = [10, 100, 1000, 10000, 100000]
 
 		# One of 6 queries to choose
-		option = 'uniqueCategory'
+		option = 'skip'
 
 		# In case of unique data like unique category, we have to pass uniqueNumber option with an unique number
 		if option == 'uniqueCategoryAndUniqueTag' or option == 'uniqueCategory':
@@ -121,11 +120,12 @@ if __name__ == '__main__':
 		r.connect(host='localhost', port=28015).repl()
 
 
-		# r.db("database10").table('posts').indexDrop('categories')
-		# r.db("database100").table('posts').indexDrop('categories')
-		# r.db("database1000").table('posts').indexDrop('categories')
-		# r.db("database10000").table('posts').indexDrop('categories')
-		# r.db("database100000").table('posts').indexDrop('categories')
+
+		r.db("database10").table("posts").index_drop("content").run()
+		r.db("database100").table("posts").index_drop("content").run()
+		r.db("database1000").table("posts").index_drop("content").run()
+		r.db("database10000").table("posts").index_drop("content").run()
+		r.db("database100000").table("posts").index_drop("content").run()
 
 
 		for docnum in documentsNumber:
@@ -133,23 +133,22 @@ if __name__ == '__main__':
 
 			# Connecting to the proper database and table for the tests
 			db = r.db("database{}".format(docnum))
-			db.table('posts').index_create("categories").run()
-			posts_table = db.table('posts').index_create("categories")
+			db.table('posts').index_create("content").run()
+			posts_table = db.table('posts')
 
 			# Wait for the index to be ready to use
-			db.table("posts").index_wait("categories").run()
+			db.table("posts").index_wait("content").run()
 
 
 
 			# Queries
 			# uniqueCategory = r.and_(
 			# r.row['categories'].contains("Category{}".format(uniqueNumber)))
+			con = "Content{}".format(int(docnum-1))
+			uniqueCategory = db.table("posts").get_all(con, index="content")
 
-			uniqueCategory = db.table("posts").filter(f"Category{docnum}", index="categories")
-			
 
-
-			nonuniqueCategory = db.table("posts").get_all("Category", index="categories")
+			nonuniqueCategory = db.table("posts").get_all("Content", index="content")
 
 			# uniqueCategoryAndUniqueTag = r.or_(
 			# r.row['tags'].contains("Tag{}".format(uniqueNumber)),
@@ -161,39 +160,39 @@ if __name__ == '__main__':
 			# r.row['categories'].contains('Category')
 			# )
 
-			# favouritePosts = r.and_(
-			# r.row['likes']['username'].contains('NormalUser')
-			# )
+			favouritePosts = r.and_(
+			r.row['likes']['username'].contains('NormalUser')
+			)
+
+
 
 			# Start time of a getting data
-			q = Queue()
-			p = Process(target=check_ressources, args=(q, f"Evaluation pour une base de données de taille {docnum}", psutil.cpu_percent(), psutil.virtual_memory().percent))
-			p.start()
 			now = time.time()
+			# q = Queue()
+			# p = Process(target=check_ressources, args=(q, f"Evaluation pour une base de données de taille {docnum}", psutil.cpu_percent(), psutil.virtual_memory().percent))
+			# p.start()
 
-
-			# Getting data
+			# #Getting data
 			# if option == 'skip':
 			# 	posts = posts_table.skip(skip).limit(limit).run()
 			# else:
 			# 	posts = posts_table.filter(globals()[option]).run()
 
-			posts = uniqueCategory.run()
-			#posts = uniqueCategory.table('tv_shows').filter({'name':'Will'}).run()
+			post = uniqueCategory.run()
+			nonuniqueCategory = db.table("posts").get_all("Content", index="content")
 
 
-			# End time for getting all of the matched documents
 
 			# Just for displaying data
-
-			end = time.time()
-			print(f"La durée pour toutes les selections pour une base de donnée de taille {docnum}: {end-now:.2f} secondes\n")
-
-
 			for post in posts:
 				print(post)
-			q.put('Done')
-			p.join()
+
+			# End time for getting all of the matched documents
+			end = time.time()
+
+			print(f"La durée pour toutes les selections pour une base de donnée de taille {docnum}: {end-now:.2f} secondes\n")
+			# q.put('Done')
+			# p.join()
 
 
 

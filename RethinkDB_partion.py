@@ -51,7 +51,7 @@ if __name__ == '__main__':
 	for docnum in documentsNumber:
 		r.db_create("database{}_partitioned".format(docnum)).run()
 		db = r.db("database{}_partitioned".format(docnum))
-		db.table_create('posts',partitioned=True).run()
+		db.table_create('posts',partition_key={'title':}).run()
 		posts_table = db.table('posts')
 
 		# Start time of all insertions

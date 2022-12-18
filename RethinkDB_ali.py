@@ -119,6 +119,7 @@ if __name__ == '__main__':
 		r.connect(host='localhost', port=28015).repl()
 
 		for docnum in documentsNumber:
+			uniqueNumber = docnum-1
 
 
 			# Connecting to the proper database and table for the tests
