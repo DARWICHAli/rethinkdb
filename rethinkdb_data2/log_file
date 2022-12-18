@@ -1,0 +1,63 @@
+2022-12-18T23:33:34.769788577 0.077310s notice: Recursively removing directory /home/ali/Documents/uni/m2/tdr_rethinkdb/rethinkdb_data2/tmp
+2022-12-18T23:33:34.794012594 0.101533s notice: Initializing directory /home/ali/Documents/uni/m2/tdr_rethinkdb/rethinkdb_data2
+2022-12-18T23:33:34.794125394 0.101646s notice: Running rethinkdb 2.4.2~0jammy (GCC 11.2.0)...
+2022-12-18T23:33:34.795788721 0.103309s notice: Running on Linux 5.15.0-56-generic x86_64
+2022-12-18T23:33:34.795820110 0.103340s notice: Loading data from directory /home/ali/Documents/uni/m2/tdr_rethinkdb/rethinkdb_data2
+2022-12-18T23:33:35.069632012 0.377153s info: Automatically using cache size of 792 MB
+2022-12-18T23:33:35.072124688 0.379645s notice: Listening for intracluster connections on port 29016
+2022-12-18T23:33:35.072784147 0.380305s info: Attempting connection to 1 peer...
+2022-12-18T23:33:35.077181801 0.384702s notice: Connected to server "ali_HP_elw" e9d87095-d2cc-4001-b6b7-9bfafb18fcfc
+2022-12-18T23:33:35.082221146 0.389742s notice: Listening for client driver connections on port 28016
+2022-12-18T23:33:35.082341365 0.389862s notice: Listening for administrative HTTP connections on port 8081
+2022-12-18T23:33:35.082348807 0.389870s notice: Listening on cluster addresses: 127.0.0.1, ::1
+2022-12-18T23:33:35.082350236 0.389870s notice: Listening on driver addresses: 127.0.0.1, ::1
+2022-12-18T23:33:35.082359119 0.389879s notice: Listening on http addresses: 127.0.0.1, ::1
+2022-12-18T23:33:35.082366594 0.389887s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2022-12-18T23:33:35.082375404 0.389896s notice: Server ready, "ali_HP_jq0" 8ac84db7-f174-4d5e-84cf-49af19ba3a13
+2022-12-18T23:34:59.736664528 85.044186s info: Table 0db093d7-6aa3-4a56-88af-7c69386dce8c: Added replica on this server.
+2022-12-18T23:37:44.158187604 249.465709s info: Table fec873d3-08d2-41d0-b636-5956808d04e1: Added replica on this server.
+2022-12-18T23:37:48.163967583 253.471488s info: Table f88e6a86-cf4a-4d8b-9a7f-aff4c564464a: Added replica on this server.
+2022-12-18T23:37:57.795824335 263.103345s info: Table 31293a0f-eb0a-45bb-a200-1a511caaadd1: Added replica on this server.
+2022-12-18T23:38:59.175485758 324.483006s info: Table 7507b14f-6090-4927-bc16-9ad8995e73ff: Added replica on this server.
+2022-12-18T23:44:07.295108442 632.602629s notice: Removing file /home/ali/Documents/uni/m2/tdr_rethinkdb/rethinkdb_data2/fec873d3-08d2-41d0-b636-5956808d04e1
+2022-12-18T23:44:07.295113791 632.602634s info: Table fec873d3-08d2-41d0-b636-5956808d04e1: Deleted the table.
+2022-12-18T23:44:12.073477892 637.380998s notice: Removing file /home/ali/Documents/uni/m2/tdr_rethinkdb/rethinkdb_data2/f88e6a86-cf4a-4d8b-9a7f-aff4c564464a
+2022-12-18T23:44:12.073483676 637.381004s info: Table f88e6a86-cf4a-4d8b-9a7f-aff4c564464a: Deleted the table.
+2022-12-18T23:44:18.458781551 643.766302s notice: Removing file /home/ali/Documents/uni/m2/tdr_rethinkdb/rethinkdb_data2/31293a0f-eb0a-45bb-a200-1a511caaadd1
+2022-12-18T23:44:18.458809290 643.766330s info: Table 31293a0f-eb0a-45bb-a200-1a511caaadd1: Deleted the table.
+2022-12-18T23:44:24.142851368 649.450372s notice: Removing file /home/ali/Documents/uni/m2/tdr_rethinkdb/rethinkdb_data2/7507b14f-6090-4927-bc16-9ad8995e73ff
+2022-12-18T23:44:24.142857676 649.450378s info: Table 7507b14f-6090-4927-bc16-9ad8995e73ff: Deleted the table.
+2022-12-18T23:44:36.031160429 661.338681s info: Table abd5080b-1716-433c-82ac-ea2a42696980: Added replica on this server.
+2022-12-18T23:44:39.869879852 665.177401s info: Table 658d6dd5-2f95-464c-af25-72664397f363: Added replica on this server.
+2022-12-18T23:44:49.475747061 674.783268s info: Table 784f26b7-ebca-4e07-bbaf-175f208d5658: Added replica on this server.
+2022-12-18T23:47:55.055248959 860.362769s info: Table 861d5940-7342-4e12-9a92-ab8373296211: Added replica on this server.
+2022-12-18T23:52:02.220837683 1107.528358s notice: Connected to server "ali_HP_e64" 372ceed7-bfdf-4b5f-8926-379b676e8385
+2022-12-18T23:53:24.076088675 1189.383609s notice: Removing file /home/ali/Documents/uni/m2/tdr_rethinkdb/rethinkdb_data2/861d5940-7342-4e12-9a92-ab8373296211
+2022-12-18T23:53:24.076092664 1189.383613s info: Table 861d5940-7342-4e12-9a92-ab8373296211: Deleted the table.
+2022-12-18T23:53:27.294414204 1192.601935s notice: Removing file /home/ali/Documents/uni/m2/tdr_rethinkdb/rethinkdb_data2/784f26b7-ebca-4e07-bbaf-175f208d5658
+2022-12-18T23:53:27.294419445 1192.601940s info: Table 784f26b7-ebca-4e07-bbaf-175f208d5658: Deleted the table.
+2022-12-18T23:53:30.696955208 1196.004476s info: Table 0303e1c3-79c9-4160-96d9-cafb9df1c959: Added replica on this server.
+2022-12-19T00:00:11.859802088 1597.167323s notice: Removing file /home/ali/Documents/uni/m2/tdr_rethinkdb/rethinkdb_data2/0303e1c3-79c9-4160-96d9-cafb9df1c959
+2022-12-19T00:00:11.859807094 1597.167327s info: Table 0303e1c3-79c9-4160-96d9-cafb9df1c959: Deleted the table.
+2022-12-19T00:00:17.475026417 1602.782547s info: Table 7ec5f533-c747-421f-b997-abd50b6227b2: Added replica on this server.
+2022-12-19T00:21:40.051432729 2885.358953s notice: Removing file /home/ali/Documents/uni/m2/tdr_rethinkdb/rethinkdb_data2/7ec5f533-c747-421f-b997-abd50b6227b2
+2022-12-19T00:21:40.051437447 2885.358958s info: Table 7ec5f533-c747-421f-b997-abd50b6227b2: Deleted the table.
+2022-12-19T00:21:44.608940796 2889.916461s notice: Removing file /home/ali/Documents/uni/m2/tdr_rethinkdb/rethinkdb_data2/658d6dd5-2f95-464c-af25-72664397f363
+2022-12-19T00:21:44.608946028 2889.916466s info: Table 658d6dd5-2f95-464c-af25-72664397f363: Deleted the table.
+2022-12-19T00:21:48.941188815 2894.248709s notice: Removing file /home/ali/Documents/uni/m2/tdr_rethinkdb/rethinkdb_data2/abd5080b-1716-433c-82ac-ea2a42696980
+2022-12-19T00:21:48.941196197 2894.248717s info: Table abd5080b-1716-433c-82ac-ea2a42696980: Deleted the table.
+2022-12-19T00:21:55.045552805 2900.353073s info: Table 3c645276-f192-4e3b-acec-63df8cb5867c: Added replica on this server.
+2022-12-19T00:21:58.943264106 2904.250785s info: Table f5880656-7bd8-4236-a161-cfe3bb751ecb: Added replica on this server.
+2022-12-19T00:22:08.846631629 2914.154152s info: Table 525c89f6-57d4-4958-a38e-762c9fa0baeb: Added replica on this server.
+2022-12-19T00:24:57.509783021 3082.817304s notice: Removing file /home/ali/Documents/uni/m2/tdr_rethinkdb/rethinkdb_data2/f5880656-7bd8-4236-a161-cfe3bb751ecb
+2022-12-19T00:24:57.510139106 3082.817660s info: Table f5880656-7bd8-4236-a161-cfe3bb751ecb: Deleted the table.
+2022-12-19T00:25:11.972468162 3097.279989s info: Table 90054091-9f7d-46fb-99df-080ecb727a9b: Added replica on this server.
+2022-12-19T00:26:45.531738965 3190.839260s notice: Removing file /home/ali/Documents/uni/m2/tdr_rethinkdb/rethinkdb_data2/90054091-9f7d-46fb-99df-080ecb727a9b
+2022-12-19T00:26:45.531749195 3190.839270s info: Table 90054091-9f7d-46fb-99df-080ecb727a9b: Deleted the table.
+2022-12-19T00:27:14.429684487 3219.737205s info: Table 7750c224-d2a3-4f19-a1a8-4e5a847b171b: Added replica on this server.
+2022-12-19T00:28:16.610514622 3281.918035s notice: Removing file /home/ali/Documents/uni/m2/tdr_rethinkdb/rethinkdb_data2/7750c224-d2a3-4f19-a1a8-4e5a847b171b
+2022-12-19T00:28:16.610519972 3281.918040s info: Table 7750c224-d2a3-4f19-a1a8-4e5a847b171b: Deleted the table.
+2022-12-19T00:28:35.463656538 3300.771177s info: Table 65db9644-ef1b-4c91-bfc7-d85c2c5b001c: Added replica on this server.
+2022-12-19T00:29:21.638510582 3346.946031s notice: Removing file /home/ali/Documents/uni/m2/tdr_rethinkdb/rethinkdb_data2/65db9644-ef1b-4c91-bfc7-d85c2c5b001c
+2022-12-19T00:29:21.638609426 3346.946130s info: Table 65db9644-ef1b-4c91-bfc7-d85c2c5b001c: Deleted the table.
+2022-12-19T00:29:25.446437920 3350.753958s info: Table 167e6894-e245-4d9e-9b7b-2ea30ef0eefb: Added replica on this server.

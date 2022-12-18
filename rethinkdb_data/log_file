@@ -1,0 +1,46 @@
+2022-12-18T23:24:36.430210351 0.250271s notice: Recursively removing directory /home/ali/Documents/uni/m2/tdr_rethinkdb/rethinkdb_data/tmp
+2022-12-18T23:24:36.458916107 0.278976s notice: Initializing directory /home/ali/Documents/uni/m2/tdr_rethinkdb/rethinkdb_data
+2022-12-18T23:24:36.459247634 0.279307s info: Creating a default database for your convenience. (This is because you ran 'rethinkdb' without 'create', 'serve', or '--join', and the directory '/home/ali/Documents/uni/m2/tdr_rethinkdb/rethinkdb_data' did not already exist or is empty.)
+2022-12-18T23:24:36.459404351 0.279464s notice: Running rethinkdb 2.4.2~0jammy (GCC 11.2.0)...
+2022-12-18T23:24:36.494822218 0.314883s notice: Running on Linux 5.15.0-56-generic x86_64
+2022-12-18T23:24:36.494884081 0.314943s notice: Loading data from directory /home/ali/Documents/uni/m2/tdr_rethinkdb/rethinkdb_data
+2022-12-18T23:24:36.838789422 0.658849s info: Automatically using cache size of 937 MB
+2022-12-18T23:24:36.862373155 0.682432s error: TCP socket creation failed for port 29015: Address already in use.
+2022-12-18T23:30:36.120912631 0.055329s notice: Running rethinkdb 2.4.2~0jammy (GCC 11.2.0)...
+2022-12-18T23:30:36.154690734 0.089111s notice: Running on Linux 5.15.0-56-generic x86_64
+2022-12-18T23:30:36.154816348 0.089233s notice: Loading data from directory /home/ali/Documents/uni/m2/tdr_rethinkdb/rethinkdb_data
+2022-12-18T23:30:36.296993564 0.231410s info: Automatically using cache size of 788 MB
+2022-12-18T23:30:36.298385688 0.232802s error: TCP socket creation failed for port 29015: Address already in use.
+2022-12-18T23:31:40.513085729 0.171602s notice: Running rethinkdb 2.4.2~0jammy (GCC 11.2.0)...
+2022-12-18T23:31:40.514789447 0.173306s notice: Running on Linux 5.15.0-56-generic x86_64
+2022-12-18T23:31:40.514831298 0.173348s notice: Loading data from directory /home/ali/Documents/uni/m2/tdr_rethinkdb/rethinkdb_data
+2022-12-18T23:31:40.570888751 0.229405s info: Automatically using cache size of 780 MB
+2022-12-18T23:31:40.571659889 0.230176s notice: Listening for intracluster connections on port 29016
+2022-12-18T23:31:40.635406875 0.293923s notice: Listening for client driver connections on port 28016
+2022-12-18T23:31:40.635471234 0.293988s notice: Listening for administrative HTTP connections on port 8081
+2022-12-18T23:31:40.635480908 0.293997s notice: Listening on cluster addresses: 127.0.0.1, ::1
+2022-12-18T23:31:40.635509172 0.294026s notice: Listening on driver addresses: 127.0.0.1, ::1
+2022-12-18T23:31:40.635517795 0.294034s notice: Listening on http addresses: 127.0.0.1, ::1
+2022-12-18T23:31:40.635525354 0.294042s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2022-12-18T23:31:40.635533564 0.294050s notice: Server ready, "ali_HP_w8t" bede1947-6a8a-4291-931d-52185dbcc393
+2022-12-18T23:32:10.926923737 30.585441s notice: Server got SIGINT from pid 0, uid 0; shutting down...
+2022-12-18T23:32:10.927058467 30.585575s notice: Shutting down client connections...
+2022-12-18T23:32:10.927135133 30.585652s notice: All client connections closed.
+2022-12-18T23:32:10.927140016 30.585657s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2022-12-18T23:32:10.927397448 30.585914s notice: Storage engine shut down.
+2022-12-18T23:32:22.132070637 0.165264s notice: Running rethinkdb 2.4.2~0jammy (GCC 11.2.0)...
+2022-12-18T23:32:22.133803200 0.166996s notice: Running on Linux 5.15.0-56-generic x86_64
+2022-12-18T23:32:22.133832263 0.167025s notice: Loading data from directory /home/ali/Documents/uni/m2/tdr_rethinkdb/rethinkdb_data
+2022-12-18T23:32:22.190322947 0.223516s info: Automatically using cache size of 799 MB
+2022-12-18T23:32:22.191246380 0.224439s notice: Listening for intracluster connections on port 29016
+2022-12-18T23:32:22.193864884 0.227058s notice: Listening for client driver connections on port 28016
+2022-12-18T23:32:22.193952717 0.227146s notice: Listening for administrative HTTP connections on port 8081
+2022-12-18T23:32:22.193957785 0.227151s notice: Listening on cluster addresses: 127.0.0.1, 172.17.0.1, 10.188.76.68, ::1, fe80::f75d:576d:9b2e:dfc3%3
+2022-12-18T23:32:22.193961833 0.227155s notice: Listening on driver addresses: 127.0.0.1, 172.17.0.1, 10.188.76.68, ::1, fe80::f75d:576d:9b2e:dfc3%3
+2022-12-18T23:32:22.193969561 0.227162s notice: Listening on http addresses: 127.0.0.1, 172.17.0.1, 10.188.76.68, ::1, fe80::f75d:576d:9b2e:dfc3%3
+2022-12-18T23:32:22.193977317 0.227170s notice: Server ready, "ali_HP_w8t" bede1947-6a8a-4291-931d-52185dbcc393
+2022-12-18T23:33:32.937924239 70.971117s notice: Server got SIGINT from pid 0, uid 0; shutting down...
+2022-12-18T23:33:32.938041484 70.971234s notice: Shutting down client connections...
+2022-12-18T23:33:32.938090714 70.971283s notice: All client connections closed.
+2022-12-18T23:33:32.938094312 70.971287s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2022-12-18T23:33:32.938329400 70.971522s notice: Storage engine shut down.

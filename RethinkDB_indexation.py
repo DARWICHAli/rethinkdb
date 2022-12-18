@@ -148,18 +148,6 @@ if __name__ == '__main__':
 			uniqueCategory = db.table("posts").get_all(con, index="content")
 
 
-			nonuniqueCategory = db.table("posts").get_all("Content", index="content")
-
-			# uniqueCategoryAndUniqueTag = r.or_(
-			# r.row['tags'].contains("Tag{}".format(uniqueNumber)),
-			# r.row['categories'].contains("Category{}".format(uniqueNumber))
-			# )
-
-			# nonUniqueCategoriesAndTags = r.or_(
-			# r.row['tags'].contains('Tag'),
-			# r.row['categories'].contains('Category')
-			# )
-
 			favouritePosts = r.and_(
 			r.row['likes']['username'].contains('NormalUser')
 			)
@@ -168,31 +156,20 @@ if __name__ == '__main__':
 
 			# Start time of a getting data
 			now = time.time()
-			# q = Queue()
-			# p = Process(target=check_ressources, args=(q, f"Evaluation pour une base de données de taille {docnum}", psutil.cpu_percent(), psutil.virtual_memory().percent))
-			# p.start()
+			q = Queue()
+			p = Process(target=check_ressources, args=(q, f"Evaluation pour une base de données de taille {docnum}", psutil.cpu_percent(), psutil.virtual_memory().percent))
+			p.start()
+			for i in range(docnum*6):	
 
-			# #Getting data
-			# if option == 'skip':
-			# 	posts = posts_table.skip(skip).limit(limit).run()
-			# else:
-			# 	posts = posts_table.filter(globals()[option]).run()
+				uniqueCategory.run()
 
-			posts = uniqueCategory.run()
-			nonuniqueCategory = db.table("posts").get_all("Content", index="content")
-
-
-
-			# Just for displaying data
-			for post in posts:
-				print(post)
 
 			# End time for getting all of the matched documents
 			end = time.time()
 
 			print(f"La durée pour toutes les selections pour une base de donnée de taille {docnum}: {end-now:.5f} secondes\n")
-			# q.put('Done')
-			# p.join()
+			q.put('Done')
+			p.join()
 
 
 

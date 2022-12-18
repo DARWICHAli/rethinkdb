@@ -127,32 +127,8 @@ if __name__ == '__main__':
 			posts_table = db.table('posts')
 
 			# # Queries
-			# uniqueCategory = db.table("posts").get_all(f"title{docnum}")
+			uniqueCategory = db.table("posts").get_all(f"title{docnum}")
 
-
-			# nonuniqueCategory = db.table("posts").get_all("title")
-			uniqueCategory = r.and_(
-			    r.row['categories'].contains("Category{}".format(uniqueNumber))
-			)
-
-			nonUniqueCategory = r.and_(
-			    r.row['categories'].contains('Category')
-			)
-
-
-			uniqueCategoryAndUniqueTag = r.or_(
-			r.row['tags'].contains("Tag{}".format(uniqueNumber)),
-			r.row['categories'].contains("Category{}".format(uniqueNumber))
-			)
-
-			nonUniqueCategoriesAndTags = r.or_(
-			r.row['tags'].contains('Tag'),
-			r.row['categories'].contains('Category')
-			)
-
-			favouritePosts = r.and_(
-			r.row['likes']['username'].contains('NormalUser')
-			)
 
 			# Start time of a getting data
 			now = time.time()
@@ -160,20 +136,25 @@ if __name__ == '__main__':
 			p = Process(target=check_ressources, args=(q, f"Evaluation pour une base de données de taille {docnum}", psutil.cpu_percent(), psutil.virtual_memory().percent))
 			p.start()
 
-			#Getting data
-			if option == 'skip':
-				posts = posts_table.skip(skip).limit(limit).run()
-			else:
-				posts = posts_table.filter(globals()[option]).run()
 
-			#posts = nonuniqueCategory.run()
+
+			# Start time of a getting data
+			now = time.time()
+			q = Queue()
+			p = Process(target=check_ressources, args=(q, f"Evaluation pour une base de données de taille {docnum}", psutil.cpu_percent(), psutil.virtual_memory().percent))
+			p.start()
+			for i in range(docnum*6):	
+
+				uniqueCategory.run()
+
 
 			# End time for getting all of the matched documents
 			end = time.time()
 
-			# Just for displaying data
-			for post in posts:
-				print(post)
+			# End time for getting all of the matched documents
+			end = time.time()
+
+
 
 			print(f"La durée pour toutes les selections pour une base de donnée de taille {docnum}: {end-now:.2f} secondes\n")
 			q.put('Done')

@@ -1,0 +1,63 @@
+2022-12-18T23:51:34.251031262 0.083931s notice: Recursively removing directory /home/ali/Documents/uni/m2/tdr_rethinkdb/rethinkdb_data3/tmp
+2022-12-18T23:51:34.299431235 0.132330s notice: Initializing directory /home/ali/Documents/uni/m2/tdr_rethinkdb/rethinkdb_data3
+2022-12-18T23:51:34.299574932 0.132474s notice: Running rethinkdb 2.4.2~0jammy (GCC 11.2.0)...
+2022-12-18T23:51:34.301326754 0.134226s notice: Running on Linux 5.15.0-56-generic x86_64
+2022-12-18T23:51:34.301375260 0.134274s notice: Loading data from directory /home/ali/Documents/uni/m2/tdr_rethinkdb/rethinkdb_data3
+2022-12-18T23:51:34.779549369 0.612449s info: Automatically using cache size of 786 MB
+2022-12-18T23:51:34.780861500 0.613761s error: TCP socket creation failed for port 29016: Address already in use.
+2022-12-18T23:51:43.460299071 0.041706s notice: Running rethinkdb 2.4.2~0jammy (GCC 11.2.0)...
+2022-12-18T23:51:43.461941284 0.043349s notice: Running on Linux 5.15.0-56-generic x86_64
+2022-12-18T23:51:43.461983685 0.043391s notice: Loading data from directory /home/ali/Documents/uni/m2/tdr_rethinkdb/rethinkdb_data3
+2022-12-18T23:51:43.566375679 0.147783s info: Automatically using cache size of 786 MB
+2022-12-18T23:51:43.567164971 0.148572s error: TCP socket creation failed for port 29016: Address already in use.
+2022-12-18T23:51:46.567088048 0.054573s notice: Running rethinkdb 2.4.2~0jammy (GCC 11.2.0)...
+2022-12-18T23:51:46.569347540 0.056832s notice: Running on Linux 5.15.0-56-generic x86_64
+2022-12-18T23:51:46.569396647 0.056881s notice: Loading data from directory /home/ali/Documents/uni/m2/tdr_rethinkdb/rethinkdb_data3
+2022-12-18T23:51:46.658830906 0.146315s info: Automatically using cache size of 783 MB
+2022-12-18T23:51:46.659772083 0.147256s error: TCP socket creation failed for port 29016: Address already in use.
+2022-12-18T23:51:49.458550034 0.047511s notice: Running rethinkdb 2.4.2~0jammy (GCC 11.2.0)...
+2022-12-18T23:51:49.460139628 0.049100s notice: Running on Linux 5.15.0-56-generic x86_64
+2022-12-18T23:51:49.460177655 0.049138s notice: Loading data from directory /home/ali/Documents/uni/m2/tdr_rethinkdb/rethinkdb_data3
+2022-12-18T23:51:49.551249409 0.140210s info: Automatically using cache size of 789 MB
+2022-12-18T23:51:49.552043275 0.141004s error: TCP socket creation failed for port 29016: Address already in use.
+2022-12-18T23:51:57.134572804 0.045729s notice: Running rethinkdb 2.4.2~0jammy (GCC 11.2.0)...
+2022-12-18T23:51:57.135955856 0.047112s notice: Running on Linux 5.15.0-56-generic x86_64
+2022-12-18T23:51:57.136010467 0.047166s notice: Loading data from directory /home/ali/Documents/uni/m2/tdr_rethinkdb/rethinkdb_data3
+2022-12-18T23:51:57.244082227 0.155238s info: Automatically using cache size of 783 MB
+2022-12-18T23:51:57.244962719 0.156119s error: TCP socket creation failed for port 29016: Address already in use.
+2022-12-18T23:52:02.101881772 0.053332s notice: Running rethinkdb 2.4.2~0jammy (GCC 11.2.0)...
+2022-12-18T23:52:02.103531946 0.054982s notice: Running on Linux 5.15.0-56-generic x86_64
+2022-12-18T23:52:02.103561754 0.055011s notice: Loading data from directory /home/ali/Documents/uni/m2/tdr_rethinkdb/rethinkdb_data3
+2022-12-18T23:52:02.206424044 0.157874s info: Automatically using cache size of 780 MB
+2022-12-18T23:52:02.207289535 0.158739s notice: Listening for intracluster connections on port 29017
+2022-12-18T23:52:02.207770578 0.159220s info: Attempting connection to 1 peer...
+2022-12-18T23:52:02.212084144 0.163534s notice: Connected to server "ali_HP_elw" e9d87095-d2cc-4001-b6b7-9bfafb18fcfc
+2022-12-18T23:52:02.217686884 0.169136s notice: Listening for client driver connections on port 28017
+2022-12-18T23:52:02.217810064 0.169259s notice: Listening for administrative HTTP connections on port 8082
+2022-12-18T23:52:02.217811301 0.169260s notice: Listening on cluster addresses: 127.0.0.1, ::1
+2022-12-18T23:52:02.217812350 0.169261s notice: Listening on driver addresses: 127.0.0.1, ::1
+2022-12-18T23:52:02.217820420 0.169269s notice: Listening on http addresses: 127.0.0.1, ::1
+2022-12-18T23:52:02.217821294 0.169270s notice: Connected to server "ali_HP_jq0" 8ac84db7-f174-4d5e-84cf-49af19ba3a13
+2022-12-18T23:52:02.217833660 0.169283s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2022-12-18T23:52:02.217839515 0.169288s notice: Server ready, "ali_HP_e64" 372ceed7-bfdf-4b5f-8926-379b676e8385
+2022-12-18T23:53:30.721389065 88.672845s info: Table 0303e1c3-79c9-4160-96d9-cafb9df1c959: Added replica on this server.
+2022-12-19T00:00:11.860350009 489.811799s notice: Removing file /home/ali/Documents/uni/m2/tdr_rethinkdb/rethinkdb_data3/0303e1c3-79c9-4160-96d9-cafb9df1c959
+2022-12-19T00:00:11.860353898 489.811803s info: Table 0303e1c3-79c9-4160-96d9-cafb9df1c959: Deleted the table.
+2022-12-19T00:00:17.475159225 495.426608s info: Table 7ec5f533-c747-421f-b997-abd50b6227b2: Added replica on this server.
+2022-12-19T00:21:40.050452134 1778.001902s notice: Removing file /home/ali/Documents/uni/m2/tdr_rethinkdb/rethinkdb_data3/7ec5f533-c747-421f-b997-abd50b6227b2
+2022-12-19T00:21:40.050458440 1778.001908s info: Table 7ec5f533-c747-421f-b997-abd50b6227b2: Deleted the table.
+2022-12-19T00:21:55.022873197 1792.974322s info: Table 3c645276-f192-4e3b-acec-63df8cb5867c: Added replica on this server.
+2022-12-19T00:21:58.943420699 1796.894870s info: Table f5880656-7bd8-4236-a161-cfe3bb751ecb: Added replica on this server.
+2022-12-19T00:22:08.846628849 1806.798078s info: Table 525c89f6-57d4-4958-a38e-762c9fa0baeb: Added replica on this server.
+2022-12-19T00:24:57.509719435 1975.461169s notice: Removing file /home/ali/Documents/uni/m2/tdr_rethinkdb/rethinkdb_data3/f5880656-7bd8-4236-a161-cfe3bb751ecb
+2022-12-19T00:24:57.509734353 1975.461183s info: Table f5880656-7bd8-4236-a161-cfe3bb751ecb: Deleted the table.
+2022-12-19T00:25:11.922724850 1989.874175s info: Table 90054091-9f7d-46fb-99df-080ecb727a9b: Added replica on this server.
+2022-12-19T00:26:45.532873943 2083.484323s notice: Removing file /home/ali/Documents/uni/m2/tdr_rethinkdb/rethinkdb_data3/90054091-9f7d-46fb-99df-080ecb727a9b
+2022-12-19T00:26:45.532881780 2083.484331s info: Table 90054091-9f7d-46fb-99df-080ecb727a9b: Deleted the table.
+2022-12-19T00:27:14.396095904 2112.347545s info: Table 7750c224-d2a3-4f19-a1a8-4e5a847b171b: Added replica on this server.
+2022-12-19T00:28:16.612160694 2174.563610s notice: Removing file /home/ali/Documents/uni/m2/tdr_rethinkdb/rethinkdb_data3/7750c224-d2a3-4f19-a1a8-4e5a847b171b
+2022-12-19T00:28:16.612168362 2174.563617s info: Table 7750c224-d2a3-4f19-a1a8-4e5a847b171b: Deleted the table.
+2022-12-19T00:28:35.373276086 2193.324725s info: Table 65db9644-ef1b-4c91-bfc7-d85c2c5b001c: Added replica on this server.
+2022-12-19T00:29:21.636748540 2239.588198s notice: Removing file /home/ali/Documents/uni/m2/tdr_rethinkdb/rethinkdb_data3/65db9644-ef1b-4c91-bfc7-d85c2c5b001c
+2022-12-19T00:29:21.636756438 2239.588206s info: Table 65db9644-ef1b-4c91-bfc7-d85c2c5b001c: Deleted the table.
+2022-12-19T00:29:25.493325733 2243.444775s info: Table 167e6894-e245-4d9e-9b7b-2ea30ef0eefb: Added replica on this server.
