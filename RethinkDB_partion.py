@@ -40,23 +40,18 @@ if __name__ == '__main__':
 	select = True
 	maj = True
 	documentsNumber = [10, 100, 1000,10000, 100000] 
-	#documentsNumber = [100]
 
+	shardsnum = 4
+	replicasnum = 3
 	if insert: 
-		# To achieve reliable test results I encourage you to run tests for different database's size, like 10, 100, 1000 etc.
-
 
 		# Connecting to the RethinkDB server
 		r.connect(host='localhost', port=28015).repl()
 
-		# We create a suitable database and table for running various tests
-		# Create the "test" database if it does not exist
-		#try
-
 		for docnum in documentsNumber:
 			r.db_create("database{}_repl".format(docnum)).run()
 			db = r.db("database{}_repl".format(docnum))
-			db.table_create('posts',shards=4, replicas=3).run()
+			db.table_create('posts',shards=shardsnum, replicas=replicasnum).run()
 			posts_table = db.table('posts')
 
 			# Start time of all insertions
@@ -66,7 +61,7 @@ if __name__ == '__main__':
 			p.start()
 			for i in range(0, docnum):
 				# Start time of a single insertion
-				now = time.time()
+				#now = time.time()
 
 				post = {
 					"title": "Title{}".format(i),
@@ -97,35 +92,15 @@ if __name__ == '__main__':
 			p.join()
 
 	if select: 
-		# Definitions
-		uniqueNumber = 0
-		skip = 0
-		limit = 0
-
-		# Database size provided before
-
-		# One of 6 queries to choose
-		option = 'uniqueCategory'
-
-		# In case of unique data like unique category, we have to pass uniqueNumber option with an unique number
-		if option == 'uniqueCategoryAndUniqueTag' or option == 'uniqueCategory':
-			uniqueNumber = 1
-
-		# In case of skip data like pagination, we have to pass skip and limit options
-		if option == 'skip':
-			skip = 1
-			limit = 1
 
 		# Connecting to the RethinkDB server
 		r.connect(host='localhost', port=28015).repl()
 
 		for docnum in documentsNumber:
-			uniqueNumber = 1
 
 
 			# Connecting to the proper database and table for the tests
 			db = r.db("database{}_repl".format(docnum))
-			posts_table = db.table('posts')
 
 			# # Queries
 			uniqueCategory = db.table("posts").get_all(f"title{docnum}")
@@ -141,20 +116,16 @@ if __name__ == '__main__':
 
 				uniqueCategory.run()
 
-
-
-				# End time for getting all of the matched documents
+			# End time for getting all of the matched documents
 			end = time.time()
 
-			# # Just for displaying data
-			# for post in posts:
-			# 	print(post)
 
 			print(f"La durée pour toutes les selections pour une base de donnée de taille {docnum}: {end-now:.2f} secondes\n")
 			q.put('Done')
 			p.join()
+
+
 	if maj: 
-	# To achieve reliable test results I encourage you to run tests for different database's size, like 10, 100, 1000 etc.
 
 		# Connecting to the RethinkDB server
 		r.connect(host='localhost', port=28015).repl()

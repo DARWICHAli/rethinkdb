@@ -41,16 +41,13 @@ if __name__ == '__main__':
 
 	insert = False 
 	select = True
+	documentsNumber =  [10, 100, 1000, 10000, 100000]
+
 	if insert: 
-		# To achieve reliable test results I encourage you to run tests for different database's size, like 10, 100, 1000 etc.
-		documentsNumber =  [10, 100, 1000, 10000, 100000]
 
 		# Connecting to the RethinkDB server
 		r.connect(host='localhost', port=28015).repl()
 
-		# We create a suitable database and table for running various tests
-		# Create the "test" database if it does not exist
-		#try
 
 		for docnum in documentsNumber:
 			r.db_create("database{}".format(docnum)).run()
@@ -96,36 +93,18 @@ if __name__ == '__main__':
 			p.join()
 
 	if select :
-		# Definitions
-		uniqueNumber = 0
-		skip = 0
-		limit = 0
 
-		# Database size provided before
-		documentsNumber = [10, 100, 1000, 10000, 100000]
-
-		# One of 6 queries to choose
-		option = 'skip'
-
-		# In case of unique data like unique category, we have to pass uniqueNumber option with an unique number
-		if option == 'uniqueCategoryAndUniqueTag' or option == 'uniqueCategory':
-			uniqueNumber = 1
-
-		# In case of skip data like pagination, we have to pass skip and limit options
-		if option == 'skip':
-			skip = 1
-			limit = 1
-
-		# Connecting to the RethinkDB server
 		r.connect(host='localhost', port=28015).repl()
 
 
 
-		# r.db("database10").table("posts").index_drop("content").run()
-		# r.db("database100").table("posts").index_drop("content").run()
-		# r.db("database1000").table("posts").index_drop("content").run()
-		# r.db("database10000").table("posts").index_drop("content").run()
-		# r.db("database100000").table("posts").index_drop("content").run()
+		# pour supprimer les index 
+
+		r.db("database10").table("posts").index_drop("content").run()
+		r.db("database100").table("posts").index_drop("content").run()
+		r.db("database1000").table("posts").index_drop("content").run()
+		r.db("database10000").table("posts").index_drop("content").run()
+		r.db("database100000").table("posts").index_drop("content").run()
 
 
 		for docnum in documentsNumber:
@@ -133,7 +112,7 @@ if __name__ == '__main__':
 
 			# Connecting to the proper database and table for the tests
 			db = r.db("database{}".format(docnum))
-			db.table('posts').index_create("content").run()
+			db.table('posts').index_create("content").run() # création des index
 			posts_table = db.table('posts')
 
 			# Wait for the index to be ready to use
@@ -141,16 +120,9 @@ if __name__ == '__main__':
 
 
 
-			# Queries
-			# uniqueCategory = r.and_(
-			# r.row['categories'].contains("Category{}".format(uniqueNumber)))
 			con = "Content{}".format(int(docnum-1))
 			uniqueCategory = db.table("posts").get_all(con, index="content")
 
-
-			favouritePosts = r.and_(
-			r.row['likes']['username'].contains('NormalUser')
-			)
 
 
 
@@ -159,6 +131,7 @@ if __name__ == '__main__':
 			q = Queue()
 			p = Process(target=check_ressources, args=(q, f"Evaluation pour une base de données de taille {docnum}", psutil.cpu_percent(), psutil.virtual_memory().percent))
 			p.start()
+			
 			for i in range(docnum*6):	
 
 				uniqueCategory.run()
